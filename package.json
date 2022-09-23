@@ -1,0 +1,78 @@
+{
+    "name": "webapp",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "clean": "rimraf ./build",
+        "start": "react-app-rewired start",
+        "build": "react-app-rewired build",
+        "test": "react-app-rewired test",
+        "eject": "react-app-rewired eject"
+    },
+    "dependencies": {
+        "@reduxjs/toolkit": "^1.8.5",
+        "assert": "^2.0.0",
+        "buffer": "^6.0.3",
+        "crypto-browserify": "^3.12.0",
+        "crypto-js": "^4.1.1",
+        "https-browserify": "^1.0.0",
+        "i18next": "^21.9.2",
+        "modern-normalize": "^1.1.0",
+        "os-browserify": "^0.3.0",
+        "react": "^18.2.0",
+        "react-app-rewired": "^2.2.1",
+        "react-dom": "^18.2.0",
+        "react-hook-form": "^7.36.0",
+        "react-i18next": "^11.18.6",
+        "react-redux": "^8.0.4",
+        "react-router-dom": "^6.4.1",
+        "react-scripts": "5.0.1",
+        "redux-persist": "^6.0.0",
+        "stream-browserify": "^3.0.0",
+        "stream-http": "^3.2.0",
+        "url": "^0.11.0",
+        "web-vitals": "^2.1.0",
+        "web3": "^1.8.0"
+    },
+    "devDependencies": {
+        "@testing-library/jest-dom": "^5.14.1",
+        "@testing-library/react": "^13.0.0",
+        "@testing-library/user-event": "^13.2.1",
+        "@types/jest": "^27.0.1",
+        "@types/node": "^16.7.13",
+        "@types/react": "^18.0.0",
+        "@types/react-dom": "^18.0.0",
+        "@types/react-redux": "^7.1.24",
+        "@typescript-eslint/eslint-plugin": "^5.38.0",
+        "@typescript-eslint/parser": "^5.38.0",
+        "axios": "^0.27.2",
+        "cross-env": "^7.0.3",
+        "prettier": "^2.7.1",
+        "react-app-rewire-alias": "^1.1.7",
+        "react-icons": "^4.4.0",
+        "rimraf": "^3.0.2",
+        "sass": "^1.55.0",
+        "stylelint": "^14.12.1",
+        "stylelint-order": "^5.0.0",
+        "stylelint-prettier": "^2.0.0",
+        "typescript": "^4.4.2"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
+}
