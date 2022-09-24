@@ -1,0 +1,114 @@
+@import '@styles/index.scss';
+
+.Home {
+    min-height: 100vh;
+
+    .Navbar {
+        position: absolute;
+        width: 100%;
+    }
+
+    &-herobanner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100vh;
+    }
+
+    .herobanner {
+        &-map {
+            background-color: $blush;
+            background-image: url('../../assets/banner-img.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        &-info {
+            background-color: $yellow;
+            font-size: 3vmin;
+            justify-content: center;
+            padding: 2rem;
+            padding-bottom: 4rem;
+            position: relative;
+            @include flex-vertical;
+
+            &::after {
+                background-image: url('../../assets/world-map.png');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                bottom: 4rem;
+                content: '';
+                height: 5rem;
+                position: absolute;
+                right: 4rem;
+                transform: rotate(55deg);
+                width: 5rem;
+            }
+
+            h1 {
+                display: block;
+                margin: 0 auto;
+                margin-top: 20%;
+                position: relative;
+                width: fit-content;
+
+                &::after {
+                    animation: wobble-hor-top 3s 2s infinite alternate both;
+                    background-image: url('../../assets/curly-dotted-arrow.png');
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    content: '';
+                    display: block;
+                    height: 5rem;
+                    position: absolute;
+                    right: 1rem;
+                    top: 1rem;
+                    transform: translate(0, -100%) rotate(180deg);
+                    width: 5rem;
+
+                    @keyframes wobble-hor-top {
+                        0% {
+                            transform: translate(0%, -100%) rotate(180deg);
+                            transform-origin: 50% 50%;
+                        }
+
+                        15% {
+                            transform: translate(0, -100%) rotate(186deg);
+                        }
+
+                        30% {
+                            transform: translate(0, -100%) rotate(174deg);
+                        }
+
+                        45% {
+                            transform: translate(0, -100%) rotate(183.6deg);
+                        }
+
+                        60% {
+                            transform: translate(0, -100%) rotate(177.6deg);
+                        }
+
+                        75% {
+                            transform: translate(0, -100%) rotate(181.2deg);
+                        }
+                    }
+                }
+            }
+
+            p {
+                font-size: 2.5vmin;
+                font-weight: 400;
+            }
+
+            .enphasis {
+                background-color: $white;
+                border: 2px solid $black;
+                font-size: 0.75em;
+                padding: 0.25rem;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

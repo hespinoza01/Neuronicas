@@ -1,0 +1,78 @@
+@import '@styles/index.scss';
+
+@mixin box-shadow($color) {
+    box-shadow: -10px 10px $color, -12px 12px $black, 10px -10px $color,
+        12px -12px $black;
+}
+
+.Countries {
+    &-content {
+        display: grid;
+        grid-template-columns: 25% 75%;
+        grid-template-rows: 1fr;
+        min-height: 100vh;
+        padding-top: 6rem;
+    }
+
+    .Countries-list,
+    .Countries-detail {
+        height: calc(100vh - 6rem);
+        overflow-y: auto;
+    }
+
+    .Countries-list {
+        display: grid;
+        grid-auto-rows: 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    .country-item {
+        @include flex-vertical;
+        align-items: flex-start;
+        border: 2px solid $black;
+        border-bottom: none;
+        cursor: pointer;
+        font-weight: 500;
+        justify-content: center;
+        padding: 1rem 1rem;
+        padding-left: 2rem;
+        user-select: none;
+
+        &.active {
+            background-color: rgba($green, 0.45);
+        }
+    }
+
+    .Countries-detail {
+        padding: 2rem 4rem;
+        padding-bottom: 3rem;
+
+        &:not(:hover) {
+            overflow-y: hidden;
+        }
+
+        h1,
+        h3 {
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        img {
+            display: block;
+            height: 30rem;
+            margin: 0 auto;
+        }
+
+        p {
+            margin-bottom: 1rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

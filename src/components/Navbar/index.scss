@@ -1,0 +1,56 @@
+@import '@styles/index';
+
+.Navbar {
+    @include flex-horizontal;
+    background-color: $white;
+    border-bottom: 2px solid $black;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    position: absolute;
+    text-transform: capitalize;
+    width: 100%;
+    z-index: 100;
+
+    &-nav {
+        @include flex-horizontal;
+        align-items: center;
+        height: 100%;
+        list-style: none;
+    }
+
+    .nav-item {
+        color: $black;
+        font-weight: 600;
+        margin: 0 1rem;
+
+        &__active {
+            background-color: $primary;
+            border: 2px solid $black;
+            border-radius: 120%;
+            padding: 0.5rem 1.5rem;
+        }
+    }
+
+    &-button {
+        align-self: center;
+        background-color: rgba($green, 0.25);
+        border: 2px solid $green;
+        padding: 0.75rem 1rem;
+        text-transform: capitalize;
+    }
+}
+
+.NavbarLite {
+    &-nav {
+        @include flex-horizontal;
+        align-items: center;
+        font-weight: 500;
+        height: 100%;
+        list-style: none;
+    }
+
+    .nav-item {
+        margin-right: 1rem;
+        padding: 0.5rem 0;
+    }
+}
